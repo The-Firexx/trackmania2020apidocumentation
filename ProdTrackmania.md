@@ -220,6 +220,8 @@ accessToken from Level 2 - NadeoClubServices
 * Headers: **1 and 2.1**
 * Response:
   * Big JSON with all the zones ids, names, links to flags, etc.
+  * Each zone has an identifier called **zoneId** and it can be a children of other zones, so there is also a **parentId** 
+  * The root of all zones is World that has a null parentId
 
 #### GET /accounts/*accountId*/zone
 
@@ -233,7 +235,9 @@ accessToken from Level 2 - NadeoClubServices
     {"accountId":"*accountId*","timestamp":"2020-07-01T16:56:00+00:00","zoneId":"*zoneId*"}
     ```
 
-  * accountId again, timestamp and zoneId
+  * accountId: again
+  * timestamp: first time you joined Trackmania. In the above example it was on 2020-07-01, the day of game's launch
+  * zoneId: ID of the zone of the player. See GET /zones for more info.
 
 ---
 
