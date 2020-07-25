@@ -29,7 +29,7 @@ You can access in more detail what endpoints exist, the information needed to se
 
 [Prod Trackmania API](ProdTrackmania.md)
 
-[Live Services API]()
+[Live Services API](LiveServices.md)
 
 [UbiServices]()
 
