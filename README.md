@@ -17,6 +17,8 @@ For the game to work, first we need to authenticate. The next picture ilustrates
 
 ![LoginProcess](loginTrackmania.png)
 
+*Although this is the primary login process, there's more like we found in the UbiServices*
+
 As you can see, you only need to use the Login Level 0, 1 and 2 only one time, after that you only need to refresh the token from Level 1 and 2 without needing for Uplay login anymore.
 
 The next image represent the APIs used and their uses:
@@ -31,7 +33,7 @@ You can access in more detail what endpoints exist, the information needed to se
 
 [Live Services API](LiveServices.md)
 
-[UbiServices]()
+[UbiServices](UbiServices.md)
 
 [msr-public and akamai.net]()
 
