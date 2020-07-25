@@ -37,7 +37,7 @@ accessToken from Level 2 - NadeoLiveServices
 
 accessToken from Level 2 - NadeoClubServices
 
-#### GET /client/config
+## GET /client/config
 
 * Use: To get the configuration of a client
 
@@ -51,7 +51,7 @@ accessToken from Level 2 - NadeoClubServices
 
   * 3 Keys with id and timeout and settings
 
-#### PUT /waitingQueue/*some id*
+## PUT /waitingQueue/*some id*
 
 * Use: ***Idk***
 
@@ -65,7 +65,7 @@ accessToken from Level 2 - NadeoClubServices
 
   * rank is the position in the waitingQueue (0 is for no waitingQueue), refreshTime, timestamp and waitingTime
 
-#### POST /v2/authentication/token/ubiservices
+## POST /v2/authentication/token/ubiservices
 
 * Use: Login to get a Level 1 Token using the credentials from the Uplay
 
@@ -83,7 +83,7 @@ accessToken from Level 2 - NadeoClubServices
 
    * accessToken and refreshToken
 
-#### PUT /accounts/*accountId*/presence
+## PUT /accounts/*accountId*/presence
 
 * Use: Notify the Trackmania Servers that this user is online (???)
 
@@ -99,7 +99,7 @@ accessToken from Level 2 - NadeoClubServices
 
   * accountId confirmation, isOnline e refreshTime
 
-#### GET /accounts/*accountId*/policies/global/rules
+## GET /accounts/*accountId*/policies/global/rules
 
 * Use: Get all the policies associated with a user (?)
 
@@ -115,7 +115,7 @@ accessToken from Level 2 - NadeoClubServices
 
   * Array of policyRuleId, policyRuleName and policyRuleValue
 
-#### GET /accounts/*accountId*/client/config
+## GET /accounts/*accountId*/client/config
 
 * Use: Get the configuration of the client from this account
 
@@ -131,7 +131,7 @@ accessToken from Level 2 - NadeoClubServices
 
   * settings containing CSVBase, CSVSignature, CSVSignatureKeyId, PackageKeyDeleteThreshold and PackageKeyExpirationThreshold
 
-#### GET /accounts/*accountId*/client/signature?signature=*id related to last endpoint described*
+## GET /accounts/*accountId*/client/signature?signature=*id related to last endpoint described*
 
 * Use: Download the client signature
 
@@ -147,7 +147,7 @@ accessToken from Level 2 - NadeoClubServices
 
   * signature, public_key_id = 1(maybe deactivated or not used)
 
-#### GET /accounts/*accountId*/encryptedPackage/key
+## GET /accounts/*accountId*/encryptedPackage/key
 
 * Use: Download the public key of the user
 
@@ -163,7 +163,7 @@ accessToken from Level 2 - NadeoClubServices
 
   * Public Key, idk when is used
 
-#### GET /client/updaters/current
+## GET /client/updaters/current
 
 **This returns HTTP 422 Unprocessable Entity, still I will document how the game requested**
 
@@ -181,7 +181,7 @@ accessToken from Level 2 - NadeoClubServices
 
   * ***Error, idk why***
 
-#### GET /accounts/*accountId*/client/urls
+## GET /accounts/*accountId*/client/urls
 
 * Use: ***Idk***
 
@@ -197,7 +197,7 @@ accessToken from Level 2 - NadeoClubServices
 
    * ***maybe not used at all, or only used with specific conditions?***
 
-#### GET /accounts/*accountId*/client/plugins
+## GET /accounts/*accountId*/client/plugins
 
 * Use: **Idk**
 
@@ -213,7 +213,7 @@ accessToken from Level 2 - NadeoClubServices
 
   * Array containing list of scripts, this one are default i guess
 
-#### GET /zones
+## GET /zones
 
 * Use: Get all the IDs from all the zones for internal use and to be able to call endpoints using this IDs
 
@@ -221,7 +221,7 @@ accessToken from Level 2 - NadeoClubServices
 * Response:
   * Big JSON with all the zones ids, names, links to flags, etc.
 
-#### GET /accounts/*accountId*/zone
+## GET /accounts/*accountId*/zone
 
 * Headers: **1 and 2.1**
 
@@ -241,7 +241,7 @@ accessToken from Level 2 - NadeoClubServices
 
 ---
 
-#### POST /v2/authentication/token/nadeoservices - NadeoLiveServices
+## POST /v2/authentication/token/nadeoservices - NadeoLiveServices
 
 * Use: Login to get a Level 2 Token to be used in NadeoLiveServices, using the Level 1 token
 
@@ -264,7 +264,7 @@ accessToken from Level 2 - NadeoClubServices
 
   * accessToken and refreshToken
 
-#### POST /v2/authentication/token/nadeoservices - NadeoClubServices
+## POST /v2/authentication/token/nadeoservices - NadeoClubServices
 
 * Use: Login to get a Level 2 Token to be used in NadeoClubServices, using the Level 1 token
 
@@ -287,7 +287,7 @@ accessToken from Level 2 - NadeoClubServices
 
   * accessToken and RefreshToken
 
-#### GET /mapRecords/?accountIdList=*some ids* *other parameters like seasonId or addPersonalBest* 
+## GET /mapRecords/?accountIdList=*some ids* *other parameters like seasonId or addPersonalBest* 
 
 * Use: Get more info about a record, and the url leads to a ghost file
 
@@ -305,7 +305,7 @@ accessToken from Level 2 - NadeoClubServices
 
   
 
-#### GET /maps/?mapIdList=*ListMapIds*
+## GET /maps/?mapIdList=*ListMapIds*
 
 * Use: Get info about a map and be able to download the map with the link included in the response
 
@@ -323,7 +323,7 @@ accessToken from Level 2 - NadeoClubServices
 
   * List of objects with author, authorScore, bronzeScore, silverScore, goldScore, collectionName(*always Stadium?*), environment(*always Stadium?*), filename, isPlayable,mapId,mapUid,name,submitter(*not confirmed but probably accountId*), timestamp, fileUrl, thumbnailUrl
 
-#### GET /trophies/settings
+## GET /trophies/settings
 
 * Use: Get Trophies
 
@@ -337,7 +337,7 @@ accessToken from Level 2 - NadeoClubServices
   
   * An object called Gain, with only another object called Solo, and then SoloMedal, and then for every other object inside this one (ClubOfficial, ClubUnofficial, SoloAll, SoloBlack, SoloBlue, SoloGreen, SoloRed, SoloWhite, TrackOfTheDay) it returns if the person obtained all bronze, silver, gold and author medal of that group. Maybe the solo trophies are calculated by checking if the user already win all the medals from specific group?
 
-#### GET /maps/?mapUidList=*mapUidList* (this one is with Uids!!!)
+## GET /maps/?mapUidList=*mapUidList* (this one is with Uids!!!)
 
 * Use: Get info about a map and be able to download the map with the link included in the response
 
@@ -352,7 +352,7 @@ accessToken from Level 2 - NadeoClubServices
     {"author":"2116b392-d808-4264-923f-2bfcfa60a570","authorScore":53291,"bronzeScore":80000,"collectionName":"Stadium","environment":"Stadium","filename":"Summer 2020 - 24.Map.Gbx","goldScore":56000,"isPlayable":true,"mapId":"c1510106-6be4-4b29-8180-67c27317b0b2","mapUid":"0fJFNOS8ZzfDA6fJQrr5JU0JIom","name":"Summer 2020 - 24","silverScore":64000,"submitter":"2116b392-d808-4264-923f-2bfcfa60a570","timestamp":"2020-06-23T15:58:29+00:00","fileUrl":"https:\/\/prod.trackmania.core.nadeo.online\/storageObjects\/a2e32718-f6fa-423c-a0dd-8bc415cdd48d","thumbnailUrl":"https:\/\/prod.trackmania.core.nadeo.online\/storageObjects\/3c36a826-93f2-4245-b6c3-851f3b0d907c.jpg"}
     ````
 
-#### GET /seasons/*seasonid*
+## GET /seasons/*seasonid*
 
 * Use: Get info about a season, with all the details, included info about map ids 
 
@@ -366,7 +366,7 @@ accessToken from Level 2 - NadeoClubServices
 
   * creationTimestamp, creatorId, endTimestamp, gameMode, gameModeCustomData, isOfficial, name, recordScoreType, seasonId, seasonMapList with objects with mapId and timestamp, and startTimestamp
 
-#### GET /webidentities/?accountIdList=*accountIdsList*
+## GET /webidentities/?accountIdList=*accountIdsList*
 
 * Use: ***Idk***
 
@@ -380,15 +380,15 @@ accessToken from Level 2 - NadeoClubServices
 
   * Vary: Authorization
 
-    ````json
-  [{"accountId":"*accountId*","provider":"ubiServices","uid":"*IDK WHAT THIS ID IS.*","timestamp":"2020-05-07T21:15:24+00:00"}]
-    ````
+````json
+[{"accountId":"*accountId*","provider":"ubiServices","uid":"*IDK WHAT THIS ID IS.*","timestamp":"2020-05-07T21:15:24+00:00"}]
+````
 
   * array of accountId, provider, uid and timestamp 
   
   * ***Which one represent the accountId and the profileId? TODO!!***
 
-#### HEAD /storageObjects/*someFileName* 
+## HEAD /storageObjects/*someFileName* 
 
 ***This Redirects to others servers, probably to load balancing between different servers since is for downloading archives***
 
@@ -401,7 +401,7 @@ accessToken from Level 2 - NadeoClubServices
 * Response
   * HTTP Code 307 with Location Header having a URL to the file
 
-#### GET /encryptedPackages/versions/?checksumList=*checksum*
+## GET /encryptedPackages/versions/?checksumList=*checksum*
 
 * Use: **Idk, but this is used when we want to upload a new mapRecord**
 
@@ -417,7 +417,7 @@ accessToken from Level 2 - NadeoClubServices
   * The Url transfer a Pack File
   * ***Idk where the checksum used in the request URI came from***
 
-#### POST /mapRecords
+## POST /mapRecords
 
 * Use: Upload a new map record
 
@@ -438,7 +438,7 @@ accessToken from Level 2 - NadeoClubServices
   
   * ***Didnt find the response for this one and can't replicate, I will try making another record in a map to get the response***
 
-#### GET /servers/*someId*
+## GET /servers/*someId*
 
 * Use: Get info about a server
 
@@ -452,7 +452,7 @@ accessToken from Level 2 - NadeoClubServices
   
   * accountId (creator of the server?), gameMode, gameModeCustomData, ip, isPrivate, login, name, playerCount, playerCountMax, port, timestamp, titleId
 
-#### GET /accounts/*accountId*/trophies/lastYearSummary
+## GET /accounts/*accountId*/trophies/lastYearSummary
 
 * Use: Get the current trophies from an account
 
