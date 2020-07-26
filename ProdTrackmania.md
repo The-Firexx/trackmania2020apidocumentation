@@ -245,18 +245,29 @@ accessToken from Level 2 - NadeoClubServices
 
 ---
 
-## POST /v2/authentication/token/nadeoservices - NadeoLiveServices
+## POST /v2/authentication/token/nadeoservices
 
 * Use: Login to get a Level 2 Token to be used in NadeoLiveServices, using the Level 1 token
 
 * Headers: **1 and 2.1**
 
   * Content-Type: application/json
-  * Content-Length: 38
-
+  
 * Body:
 
-  * {"audience" : "NadeoLiveServices"}
+  ```json
+  {"audience" : "NadeoLiveServices"}
+  ```
+
+  or
+
+  ```json
+  {"audience" : "NadeoClubServices"}
+  ```
+
+  The type of audience used will affect where the token can be used
+
+  ***Note that if you don't provide a json body, you get a token for audience `NadeoServices`***
 
 * Response
 
@@ -268,20 +279,32 @@ accessToken from Level 2 - NadeoClubServices
 
   * accessToken and refreshToken
 
-## POST /v2/authentication/token/nadeoservices - NadeoClubServices
+## POST /v2/authentication/token/basic
 
-* Use: Login to get a Level 2 Token to be used in NadeoClubServices, using the Level 1 token
+* Use: Login using Basic Authentication
 
-* Headers: **1 and 2.1**
+* Headers:
 
-  * Content-Type: application/json
-  * Content-Length: 38
+  * Authorization: Basic authentication with username/password set to your dedicated server login/password
+  * Content-type: application/json
 
-* Body
+* Body:
 
-  * {"audience" : "NadeoClubServices"}
+  ```json
+  {"audience" : "NadeoLiveServices"}
+  ```
 
-* Response:
+  or
+
+  ```json
+  {"audience" : "NadeoClubServices"}
+  ```
+
+  The type of audience used will affect where the token can be used
+
+  ***Note that if you don't provide a json body, you get a token for audience `NadeoServices`***
+
+* Response
 
   * Vary: Authorization
 
@@ -289,7 +312,7 @@ accessToken from Level 2 - NadeoClubServices
     {"accessToken":"*token*","refreshToken":"*token*"}
     ```
 
-  * accessToken and RefreshToken
+  * accessToken and refreshToken
 
 ## GET /mapRecords/?accountIdList=*some ids* *other parameters like seasonId or addPersonalBest* 
 
@@ -474,4 +497,4 @@ accessToken from Level 2 - NadeoClubServices
 
 ## TODO
 
-* Use this endpoint GET /api/routes?usage=Client or GET /api/routes to check for the others endpoints
+* Use this endpoint **GET /api/routes?usage=Client** or **GET /api/routes** to check for the others endpoints
