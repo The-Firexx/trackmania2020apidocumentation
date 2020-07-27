@@ -15,6 +15,8 @@ This is in a very begin phase so please pull request to help this project by fix
 
 Any help is appreciated!
 
+Also, if you have any project that you are developing and you are using this documentation to help you in the interaction with the Trackmania API you can share with me and I will be glad to share here your project. It can be a simple wrapper library or even a full app. 
+
 ## TODO
 
 * **Since I don't have club access, I can't test some functions inside the game like rooms and clubs, so that part are lacking in this documentation**
@@ -25,103 +27,13 @@ Any help is appreciated!
 * [Marco97pa](https://github.com/marco97pa) for helping on completing some information. He's also creating this [companion app](https://play.google.com/store/apps/details?id=com.marco97pa.trackmania) that will benefit from this documentation
 * [Codecat](https://github.com/codecat) from showing some [information](https://gist.github.com/codecat/4dfd3719e1f8d9e5ef439d639abe0de4) about this, and suggest to add the warning about the use of Trackmania API. Also made this [plugin](https://openplanet.nl/files/49) for OpenPlanet to inspect the packets ingame
 
-## Login Process
+## Projects using Trackmania API
 
-For the game to work, first we need to authenticate. The next picture ilustrates the process of login in the APIs and how the different tokens have different uses
+* [Breeku](https://github.com/breeku/) made a [npm module](https://github.com/breeku/trackmania-api-node) that helps developers to use the Trackmania API by abstracting the HTTP requests and wrap them in methods that can be called for a more easy use of the API in a program.
 
-![LoginProcess](loginTrackmania.png)
+## Login Process and Tokens
 
-*Although this is the primary login process, there's more like we found in the UbiServices*
-
-As you can see, you only need to use the Login Level 0, 1 and 2 only one time, after that you only need to refresh the token from Level 1 and 2 without needing for Uplay login anymore.
-
-## Tokens
-
-The tokens that are being used in the process described before are of JWT type. So, if we try to decode them we get:
-
-### Ticket Value from Response Level 0
-
-This one is encrypted, probably because this response come from UbisoftServers to login on Uplay. We are only able to check their headers, that confirm the JWT token is a encrypted one (*JWE*)
-
-```json
-{
- "ver": "1",
- "aid": "*someId*", 
- "env": "Prod",
- "sid": "*someId*", 
- "typ": "JWE",
- "enc": "A128CBC",
- "iv": "*inicializerVector*",
- "int": "HS256"
-}
-```
-
-*Missing description*
-
-### Access Token Value from Response Level 1 and 2
-
-This response came from the Trackmania API and this one is ***not*** encrypted. If we check the headers and payload of the JWT we get this:
-
-**Header**
-
-```json
-{
- "typ": "JWT",
- "alg": "HS256",
- "env": "trackmania-prod",
- "ver": "1"
-}
-```
-
-**Body**
-
-```json
-{
- "jti": "*someId*",
- "iss": "NadeoServices",
- "iat": 1595707067,
- "rat": 1595708867,
- "exp": 1595710667,
- "aud": "NadeoServices",
- "usg": "Client",
- "sid": "*someId*",
- "sub": "*accountId*",
- "aun": "*username*",
- "rtk": false,
- "pce": false,
- "ubiservices_pid": "*someId*"
-}
-```
-
-**iss** is the name of the issuer, **exp** tells use the time until the token is valid, **rat** the time where after that we can refresh our token, **aud** is for where the token is to be used (Level 1 says NadeoServices, but Level 2 can say NadeoLiveServices or other), **usg** the type of use, **sub** is our accountId (this is were we know our accountId on the game), **aun** is our username. The **sid** is the same for both accessToken and refreshToken, and Level 1 and 2, although I don't know what is this. *Missing more description*
-
-### Refresh Token Value from Response Level 1 and 2
-
-The header JWT is the same as the last one, the body have this structure:
-
-```json
-{
- "jti": "*someId*",
- "iss": "NadeoServices",
- "iat": 1595707067,
- "rat": 1595750267,
- "exp": 1595793467,
- "aud": "NadeoServices",
- "usg": "Client",
- "sid": "*someId*",
- "sub": "*accountId*",
- "aun": "*username*",
- "rtk": true,
- "pce": false,
- "ubiservices_pid": "*someId*",
- "refresh_aud": "NadeoServices",
- "limit_type": "none"
-}
-```
-
-We can see that this one have **rtk** to true (although I don't know what is this), and have a **refresh_aud**  (Level 1 says NadeoServices, but Level 2 can say NadeoLiveServices or other), and a **limit_type**. *Missing more description*
-
-
+[Here](Login.md) you can check all the process of login and getting the tokens, with a explanation of what information the tokens have.
 
 ## APIs
 
@@ -138,7 +50,7 @@ We can see that this one have **rtk** to true (although I don't know what is thi
 There are many IDs that are used to identify things and make requests. The follow list shows that IDs and their purpose:
 
 * ProfileId - Obtained when we login to Uplay (Level 0)
-* AccountId - Used ingame to identify a user. ~~Idk when the game knows our accountId~~
+* AccountId - Used ingame to identify a user. Obtained within the JWT Token from Level 1 or 2 Login Process
 * MapId/MapUid - Used ingame to identify a map
 * GroupId/GroupUid - Used ingame to identify a group (***Needs more info about what is a group***)
 * SeasonId - Used ingame to identify a season (like the campaigns, club campaigns and track of the day)
