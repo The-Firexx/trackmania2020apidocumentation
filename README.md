@@ -19,17 +19,19 @@ Also, if you have any project that you are developing and you are using this doc
 
 ## TODO
 
-* **Since I don't have club access, I can't test some functions inside the game like rooms and clubs, so that part are lacking in this documentation**
+* **Since I don't have club access, I can't test some functions inside the game like rooms and clubs, so that part are lacking in this documentation. If you have club access and wants to help, but you dont want to give your credentials to me, you can DM me and I can say how you can help me**
 
 ## Contributors
 
 * Myself, [The-Firexx](https://github.com/The-Firexx), for gathering most of this information and creating this repository
-* [Marco97pa](https://github.com/marco97pa) for helping on completing some information. He's also creating this [companion app](https://play.google.com/store/apps/details?id=com.marco97pa.trackmania) that will benefit from this documentation
+* [Marco97pa](https://github.com/marco97pa) for helping on completing some information.
 * [Codecat](https://github.com/codecat) from showing some [information](https://gist.github.com/codecat/4dfd3719e1f8d9e5ef439d639abe0de4) about this, and suggest to add the warning about the use of Trackmania API. Also made this [plugin](https://openplanet.nl/files/49) for OpenPlanet to inspect the packets ingame
 
 ## Projects using Trackmania API
 
 * [Breeku](https://github.com/breeku/) made a [npm module](https://github.com/breeku/trackmania-api-node) that helps developers to use the Trackmania API by abstracting the HTTP requests and wrap them in methods that can be called for a more easy use of the API in a program.
+* [Jonese1234](https://github.com/jonese1234/) created a [Leaderboard Scraper](https://github.com/jonese1234/Trackmania-2020-Leaderboard-Scraper) that, although it started without help, is using this documentation to use more functions.
+* [Marco97pa](https://github.com/marco97pa) is creating this [companion app](https://play.google.com/store/apps/details?id=com.marco97pa.trackmania) that is in progress to add more functions by using the Trackmania API.
 
 ## Login Process and Tokens
 
