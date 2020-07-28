@@ -4,7 +4,7 @@
 
 For the game to work, first we need to authenticate. The next picture ilustrates the process of login in the APIs and how the different tokens have different uses
 
-![LoginProcess](D:/Firo/Documents/Projects/TrackmaniaAPIUnofficialDocumentation/loginTrackmania.png)
+![LoginProcess](loginTrackmania.png)
 
 *Although this is the primary login process, there's more like we found in the UbiServices*
 
