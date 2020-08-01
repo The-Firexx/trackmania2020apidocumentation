@@ -26,6 +26,7 @@ Also, if you have any project that you are developing and you are using this doc
 * Myself, [The-Firexx](https://github.com/The-Firexx), for gathering most of this information and creating this repository
 * [Marco97pa](https://github.com/marco97pa) for helping on completing some information.
 * [Codecat](https://github.com/codecat) from showing some [information](https://gist.github.com/codecat/4dfd3719e1f8d9e5ef439d639abe0de4) about this, and suggest to add the warning about the use of Trackmania API. Also made this [plugin](https://openplanet.nl/files/49) for OpenPlanet to inspect the packets ingame
+* [Breeku](https://github.com/breeku) for helping on completing information about webidentities
 
 ## Projects using Trackmania API
 
