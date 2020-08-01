@@ -395,25 +395,23 @@ accessToken from Level 2 - NadeoClubServices
 
 ## GET /webidentities/?accountIdList=*accountIdsList*
 
-* Use: ***Idk***
+* Use: Get profile id's based on account ids
 
 * Headers: **1 and 2.1**
 
 * Params
 
-  * accountIdList = list of accountIds separated by %
+  * accountIdList = list of accountIds separated by %2c
 
 * Response
 
   * Vary: Authorization
 
 ````json
-[{"accountId":"*accountId*","provider":"ubiServices","uid":"*IDK WHAT THIS ID IS.*","timestamp":"2020-05-07T21:15:24+00:00"}]
+[{"accountId":"*accountId*","provider":"ubiServices","uid":"*profileId*","timestamp":"2020-05-07T21:15:24+00:00"}]
 ````
 
   * array of accountId, provider, uid and timestamp 
-  
-  * ***Which one represent the accountId and the profileId? TODO!!***
 
 ## HEAD /storageObjects/*someFileName* 
 
