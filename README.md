@@ -30,7 +30,7 @@ Also, if you have any project that you are developing and you are using this doc
 
 ## Projects using Trackmania API
 
-* [Breeku](https://github.com/breeku/) made a [npm module](https://github.com/breeku/trackmania-api-node) that helps developers to use the Trackmania API by abstracting the HTTP requests and wrap them in methods that can be called for a more easy use of the API in a program. He also made a [Trackmania Leaderboard Page](https://trackmania-leaderboards.herokuapp.com/)
+* [Breeku](https://github.com/breeku/) made a [npm module](https://github.com/breeku/trackmania-api-node) that helps developers to use the Trackmania API by abstracting the HTTP requests and wrap them in methods that can be called for a more easy use of the API in a program. He also made a [Trackmania Leaderboard Page](https://github.com/breeku/opentrackmania)
 * [Jonese1234](https://github.com/jonese1234/) created a [Leaderboard Scraper](https://github.com/jonese1234/Trackmania-2020-Leaderboard-Scraper) that, although it started without help, is using this documentation to use more functions.
 * [Marco97pa](https://github.com/marco97pa) is creating this [companion app](https://play.google.com/store/apps/details?id=com.marco97pa.trackmania) that is in progress to add more functions by using the Trackmania API.
 

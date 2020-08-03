@@ -340,7 +340,7 @@ accessToken from Level 2 - NadeoClubServices
 
 * Params
 
-  * mapIdList = List of Map Ids separated by %
+  * mapIdList = List of Map Ids separated by %2c
 
 * Response
 
@@ -371,7 +371,7 @@ accessToken from Level 2 - NadeoClubServices
 * Headers: **1 and 2.1**
 * Params
   
-  * mapUidList=List of map Uids separated by %
+  * mapUidList=List of map Uids separated by %2c
 * Response
   * Vary: Authorization
   
