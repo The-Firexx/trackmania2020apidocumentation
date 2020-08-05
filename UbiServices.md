@@ -201,6 +201,8 @@
 ## GET v3/profiles?profileId=*profileIdsListSeparatedByComma*
 
 * Use: Get more info about the users
+  * You can get profile id's with '/webidentities/?accountIdList=accountIdsList' of the prod API.
+  https://github.com/The-Firexx/trackmania2020apidocumentation/blob/master/ProdTrackmania.md#get-webidentitiesaccountidlistaccountidslist
 
 * Headers
 
