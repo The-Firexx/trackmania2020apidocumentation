@@ -60,6 +60,10 @@ There are many IDs that are used to identify things and make requests. The follo
 * ClubId - Used ingame to identify a club
 * RoomId - Used ingame to identify a room inside a club (***What type of rooms exist inside a club?***)
 
+## Some Relevant Use Cases
+
+[Here](UseCases.md) you can check some use cases that probably you will be using and instead of trying to lookup the all documentation you can look to this file and see if you can find what you need. *Work in Progress*
+
 ## Specification
 
 You can access in more detail what endpoints exist, the information needed to send and the response received in the next links:

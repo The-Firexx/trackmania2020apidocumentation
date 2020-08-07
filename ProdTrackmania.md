@@ -314,16 +314,18 @@ accessToken from Level 2 - NadeoClubServices
 
   * accessToken and refreshToken
 
-## GET /mapRecords/?accountIdList=*some ids* *other parameters like seasonId or addPersonalBest* 
+## GET /mapRecords/?accountIdList=*some ids*&addPersonalBest=*boolean*&seasonId=*seasonId*&mapIdList=*mapIdList* *other parameters like seasonId or addPersonalBest* 
 
-* Use: Get more info about a record, and the url leads to a ghost file
+* Use: Get more info about a record, and the url leads to a ghost file, that you can use to download and played it on the replay editor (***check some relevant use cases README about how you can watch a ghost file on Trackmania***)
 
 * Headers: **1 and 2.1**
 
 * Params
   * accountIdList - list of accountIds
   * addPersonalBest - true or false, idk what is this for
-
+* seasonId - ID of the season
+  * mapIdList - IDs of the map to lookup
+  
 * Response
 
   ````json
