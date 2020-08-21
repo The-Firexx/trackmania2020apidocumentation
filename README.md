@@ -20,6 +20,7 @@ Also, if you have any project that you are developing and you are using this doc
 ## TODO
 
 * **Since I don't have club access, I can't test some functions inside the game like rooms and clubs, so that part are lacking in this documentation. If you have club access and wants to help, but you dont want to give your credentials to me, you can DM me and I can say how you can help me**
+* **We still don't know how to get the accountId given an username. I ALREADY KNOW HOW TO GET THE PROFILEID!! But it seems that the Nadeo's API don't have any endpoint we can use to get the accountId from a profileId, until then the only way we can lookup data from a specific user is if the user logins with their Uplay account**
 
 ## Contributors
 
@@ -30,9 +31,10 @@ Also, if you have any project that you are developing and you are using this doc
 
 ## Projects using Trackmania API
 
-* [Breeku](https://github.com/breeku/) made a [npm module](https://github.com/breeku/trackmania-api-node) that helps developers to use the Trackmania API by abstracting the HTTP requests and wrap them in methods that can be called for a more easy use of the API in a program. He also made a [Trackmania Leaderboard Page](https://github.com/breeku/opentrackmania)
+* [Breeku](https://github.com/breeku/) made a [npm module](https://github.com/breeku/trackmania-api-node) that helps developers to use the Trackmania API by abstracting the HTTP requests and wrap them in methods that can be called for a more easy use of the API in a program. He also made a [Trackmania Leaderboard Page](https://opentrackmania.com/) where you can lookup for TOTD, Season tracks and players present on the leaderboard | [Repo](https://github.com/breeku/opentrackmania)
 * [Jonese1234](https://github.com/jonese1234/) created a [Leaderboard Scraper](https://github.com/jonese1234/Trackmania-2020-Leaderboard-Scraper) that, although it started without help, is using this documentation to use more functions.
 * [Marco97pa](https://github.com/marco97pa) is creating this [companion app](https://play.google.com/store/apps/details?id=com.marco97pa.trackmania) that is in progress to add more functions by using the Trackmania API.
+* [Codecat](https://github.com/codecat) made a [Trackmania Website](http://trackmania.io) where, besides listing the tracks from TOTD and seasons, you can check the records from the tracks and list servers and club rooms
 
 ## Login Process and Tokens
 
