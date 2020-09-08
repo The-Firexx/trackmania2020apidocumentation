@@ -70,6 +70,14 @@ There are many IDs that are used to identify things and make requests. The follo
 
 You can access in more detail what endpoints exist, the information needed to send and the response received in the next links:
 
+### By Indexs
+
+[Index By Topic](TopicIndex.md)
+
+[Overall Index](Index.md)
+
+### By WebAPIs
+
 [Prod Trackmania API](ProdTrackmania.md)
 
 [Live Services API](LiveServices.md)
