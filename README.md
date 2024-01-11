@@ -1,4 +1,7 @@
-# Trackmania 2020 Unofficial API Documentation
+# ATTENTION: This repository is deprecated, as I didn't updated ever since the first few commits. If you want to visit documentation that is being updated with the latest changes, please go to https://webservices.openplanet.dev/ (thank you [codecat](https://github.com/codecat))
+
+# Trackmania 2020 Unofficial API Documentation (DEPRECATED)
+
 This repository is a series of markdown files containing all the documentation myself and others found about Trackmania 2020 and the API calls the game makes to work.
 
 ## Warning!!
